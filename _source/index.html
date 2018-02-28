@@ -1,0 +1,69 @@
+---
+layout: portfolio
+---
+<section id="about" class="white row hide">
+  <header class="col s12">
+    <h1 class="black-text">About Me</h1>
+  </header>
+  <p class="about black-text col s12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+<section id="projects" class="black row">
+  <header class="col s12">
+    <h2 class="white-text">Projects</h2>
+  </header>
+  {% for id in (1..4) %}
+  <article id="project-{{id}}" class="col s12">
+    <div class="col s12 m3">
+      <div class="section">
+        <img class="responsive-img" src='http://via.placeholder.com/1200x1200'><figcaption class="left">
+          {% assign badges = "ruby-plain rails-plain nginx-plain" | split: " " %}
+          {% for badge in badges %}
+          <i class="colored" class='devicon-{{badge}}'></i>
+          {% endfor %}
+        </figcaption>
+      </div>
+    </div>
+    <header class="white-text col s12 m9">
+      <h3>Project-{{id}}</h3>
+    </header>
+    <p class="description col s12 m9 white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></article>
+  {% endfor %}
+</section>
+<section id="others" class="white row">
+  <header class="black-text col s12">
+    <h2>Others</h2>
+  </header>
+  {% for id in (1..4) %}
+  <article id="other-{{id}}" class="col s6 m4 l3">
+    <div class="section">
+      <img class="responsive-img col s12" src='http://via.placeholder.com/800x800'>
+      <figcaption class="col s12">
+        <div class="badges left col s12">
+          {% assign badges = "ruby-plain rails-plain nginx-plain" | split: " " %}
+          {% for badge in badges %}
+          <i class='devicon-{{badge}} colored'></i>
+          {% endfor %}
+        </div>
+        <p class="black-text description col s12">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </figcaption>
+    </div></article>
+  {% endfor %}
+</section>
+<section id="extra" class="black row">
+  <header class="col s12">
+    <h2 class="white-text">Extra</h2>
+  </header>
+  <article id="band" class="s12">
+    <section id="albums">
+      {% assign albums = "1847244859 1454660844 2534787525" | split: " " %}
+      {% for id in albums %}
+      <div class="col m4 s12">
+        <div class="video-responsive album col s12">
+          <iframe class="player" seamless="" frameborder=0 width='100%' height='100%' src="https://bandcamp.com/EmbeddedPlayer/album={{id}}/size=large/bgcol=333333/tracklist=false/linkcol=0f91ff/minimal=true/transparent=true/"></iframe>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+  </article>
+  <p>\</p>
+</section>

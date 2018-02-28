@@ -1,0 +1,30 @@
+@import 'portfolio/materialize_overrides';
+@import 'portfolio/fonts';
+@import 'portfolio/colors';
+
+.brand-logo {
+  font-family: $font-poiretone;
+}
+
+
+body {
+  font-family: $font-cabin;
+}
+
+.album {
+	position: relative;
+}
+
+.album:before {
+	content: "";
+	display: block;
+	padding-top: 105%; 	/* initial ratio of 1:1*/
+}
+
+.player {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}

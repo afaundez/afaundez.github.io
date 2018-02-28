@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv= 'Content-Type'>
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <link href='https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Abel|Poiret+One|Questrial|Quicksand|Work+Sans|Cabin' rel='stylesheet'>
+    <meta content='width=device-width, initial-scale=1.0', name='viewport'>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <header>
+      <nav class='mighty-orange'>
+        <div class='nav-wrapper'>
+          <a class='brand-logo' href='/'>afaundez</a>
+          <ul id='nav-mobile' class='right hide-on-med-and-down'>
+            <li>
+              <a mailto='alvaro@faundez.net'>
+                <i class='material-icons'>mail_outline</i></a>
+            </li>
+            <li>
+              <a href='https://github.com/afaundez'>
+                <i class='devicon-github-plain'></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class='container'>
+        {{ content }}
+      </div>
+    </main>
+    <footer>
+      <p class='center-align'>Copyright © Giffic 2018</p>
+    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js'></script>
+  </body>
+</html>
