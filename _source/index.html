@@ -1,11 +1,31 @@
 ---
 layout: portfolio
 ---
-<section id="about" class="white row hide">
+<section id="about" class="white row">
   <header class="col s12">
     <h1 class="black-text">About Me</h1>
   </header>
-  <p class="about black-text col s12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="col s12">
+    <p class="about black-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="flow-text">
+      {% assign icons = "centos docker git aws heroku hadoop mongodb mysql postgre redis bootstrap d3 jquery ruby-on-rails clojure css3 go html5 java javascript perl python ruby sass script shell" | split: " " %}
+      {% for icon in icons %}
+      <span class="icon-{{icon}}" title="{{icon}}"></span>
+      {% endfor %}
+      {% assign icons = "atom cofeescript nginx apple" | split: " " %}
+      {% for icon in icons %}
+      <span class="devicon-{{icon}}-original" title="{{icon}}"></span>
+      {% endfor %}
+      {% assign icons = "c c++ cucumber debian apache github safari chrome slack travis trello ubuntu vim" | split: " " %}
+      {% for icon in icons %}
+      <span class="devicon-{{icon}}-plain" title="{{icon}}"></span>
+      {% endfor %}
+      {% assign icons = "markdown compass less jekyll_small wordpress windows stackoverflow hackernews dropbox jenkins opensource haskell mailchimp netbeans eclipse prolog sublime materializecss sqlite" | split: " " %}
+      {% for icon in icons %}
+      <span class="devicons devicons-{{icon}}" title="{{icon}}"></span>
+      {% endfor %}
+    </p>
+  </div>
 </section>
 <section id="projects" class="black row">
   <header class="col s12">
