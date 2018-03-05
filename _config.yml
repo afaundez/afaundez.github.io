@@ -9,7 +9,7 @@ github_username: afaundez
 
 github: [metadata]
 
-source: _source
+source: source
 exclude:
   - .gitignore
   - CNAME
