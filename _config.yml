@@ -1,0 +1,17 @@
+title: afaundez
+email: alvaro@faundez.net
+description: >-
+  My stuff
+baseurl: ""
+url: https://faundez.net
+twitter_username: afaundez
+github_username: afaundez
+
+github: [metadata]
+
+source: _source
+exclude:
+  - .gitignore
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
