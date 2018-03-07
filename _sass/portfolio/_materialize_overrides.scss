@@ -1,11 +1,15 @@
-$navbar-height: 120px;
-$navbar-line-height: 120px;
+$navbar-height: 20rem;
+$navbar-line-height: 20rem;
 $navbar-brand-logo-size: 4.1rem;
 $navbar-padding-sides: 5rem;
 
+figure {
+  margin: 1rem 0rem;
+}
+
 nav {
-    height: $navbar-height;
-    line-height: $navbar-line-height;
+  height: $navbar-height;
+  line-height: $navbar-line-height;
 }
 
 nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {

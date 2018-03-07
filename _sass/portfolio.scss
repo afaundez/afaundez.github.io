@@ -4,44 +4,127 @@
 @import 'portfolio/afaundez/style';
 @import 'portfolio/colors';
 
-.brand-logo {
-  font-family: $font-poiret-one;
-}
-
-
 body {
-  font-family: $font-work-sans;
+  background-color: #101a22;
+  color: #fcebe0;
+
+  header {
+    nav {
+      background: #f1904e;
+      background: -moz-linear-gradient(left, #f1904e 0%, #f15a4c 20%, #e63745 40%, #aa384f 60%, #754143 80%, #304d64 100%);
+      background: -webkit-linear-gradient(left, #f1904e 0%,#f15a4c 20%,#e63745 40%,#aa384f 60%,#754143 80%,#304d64 100%);
+      background: linear-gradient(to right, #f1904e 0%,#f15a4c 20%,#e63745 40%,#aa384f 60%,#754143 80%,#304d64 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1904e', endColorstr='#304d64',GradientType=1 );
+
+      i {
+        font-size: 4rem !important;
+      }
+    }
+
+    .brand-logo {
+      font-family: $font-poiret-one;
+    }
+  }
+
+  main {
+    font-family: $font-work-sans;
+
+    section#projects, section#others, section#music {
+      padding-bottom: 2rem;
+      > header {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+        text-align: center;
+      }
+
+      article {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+      }
+
+      p.description {
+        text-align: justify;
+      }
+
+      p.components {
+        text-align: center;
+      }
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-family: $font-faster-one;
+      text-align: center;
+    }
+
+    section#about  {
+      background: #f1904e;
+      background: -moz-linear-gradient(left, #f1904e 0%, #f15a4c 20%, #e63745 40%, #aa384f 60%, #754143 80%, #304d64 100%);
+      background: -webkit-linear-gradient(left, #f1904e 0%,#f15a4c 20%,#e63745 40%,#aa384f 60%,#754143 80%,#304d64 100%);
+      background: url('/assets/img/bg-lines.svg') no-repeat right, linear-gradient(to right, #f1904e 0%,#f15a4c 20%,#e63745 40%,#aa384f 60%,#754143 80%,#304d64 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1904e', endColorstr='#304d64',GradientType=1 );
+
+      color: white;
+
+      h1 {
+        margin-top: 6.5rem;
+        bottom: 0.5rem;
+      }
+    }
+
+    section#projects {
+      .project {
+        img {
+          // border-style: solid;
+          // border-color: white;
+          // border-width: 0.2rem;
+        }
+      }
+
+      .show-up {
+        transition: box-shadow .50s;
+        box-shadow: 0 0 1rem 0.3rem rgba(230, 55, 69, 0.2), 0 0 0.8rem 0.2rem rgba(230, 55, 69, 0.19);
+      }
+    }
+
+    section#others {
+      background-color: #fcebe0;
+      color: #101a22;
+
+    }
+
+    section#music {
+      .album {
+        position: relative;
+      }
+
+      .album:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+
+      .player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
 
   footer {
+    background: #f1904e;
+    background: -moz-linear-gradient(left, #f1904e 0%, #f15a4c 20%, #e63745 40%, #aa384f 60%, #754143 80%, #304d64 100%);
+    background: -webkit-linear-gradient(left, #f1904e 0%,#f15a4c 20%,#e63745 40%,#aa384f 60%,#754143 80%,#304d64 100%);
+    background: linear-gradient(to right, #f1904e 0%,#f15a4c 20%,#e63745 40%,#aa384f 60%,#754143 80%,#304d64 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1904e', endColorstr='#304d64',GradientType=1 );
     font-family: $font-poiret-one;
-    background-color: $mighty-orange;
     color: white;
     margin: 0 0;
-  }
-}
-
-.album {
-	position: relative;
-}
-
-.album:before {
-	content: "";
-	display: block;
-	padding-top: 100%; 	/* initial ratio of 1:1*/
-}
-
-.player {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-}
-
-.project {
-  img {
-    border-style: solid;
-    border-color: white;
-    border-width: 0.2rem;
   }
 }
