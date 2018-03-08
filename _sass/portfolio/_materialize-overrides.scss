@@ -1,0 +1,24 @@
+@import '../materialize/components/color-variables';
+@import '../materialize/components/variables';
+
+$primary-color: #f1904e;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
+
+$secondary-color: #304d64;
+$success-color: color("green", "base");
+$error-color: color("red", "base");
+$link-color: #aa384f;
+
+$navbar-height: 20rem;
+$navbar-line-height: $navbar-height;
+$navbar-height-mobile: 56px;
+$navbar-line-height-mobile: $navbar-height-mobile;
+$navbar-font-size: 1rem;
+$navbar-font-color: #fcebe0;
+$navbar-brand-font-size: 4.1rem;
+
+$font-stack: $font-work-sans;
+$off-black: #fcebe0;
+
+$h2-fontsize: 3rem;
