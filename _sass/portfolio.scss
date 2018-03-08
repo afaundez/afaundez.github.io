@@ -66,6 +66,8 @@ body {
       background-color: #101a22;
       color: #fcebe0;
       padding-bottom: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
       > header {
         padding-top: 5rem !important;
         padding-bottom: 5rem !important;
@@ -86,13 +88,17 @@ body {
       }
     }
 
-    section#projects {
+    article.project {
       h3 {
         font-family: $font-faster-one;
         text-align: center;
       }
 
-      .show-up {
+      a {
+        font-weight: bold;
+      }
+
+      &.show-up {
         transition: box-shadow .50s;
         box-shadow: 0 0 1rem 0.3rem rgba(230, 55, 69, 0.2), 0 0 0.8rem 0.2rem rgba(230, 55, 69, 0.19);
       }
