@@ -14,3 +14,12 @@ exclude:
   - CNAME
   - Gemfile
   - Gemfile.lock
+
+favicon:
+  path: /assets/img/favicon
+  apple-touch-icon:
+    background: '#f1904e'
+  safari-pinned-tab:
+    mask-icon-color: '#f1904e'
+  ie:
+    tile-color: '#f1904e'
