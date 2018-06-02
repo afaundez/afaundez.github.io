@@ -9,11 +9,7 @@ github_username: afaundez
 
 github: [metadata]
 
-exclude:
-  - .gitignore
-  - CNAME
-  - Gemfile
-  - Gemfile.lock
+source: _source
 
 favicon:
   path: /assets/img/favicon
