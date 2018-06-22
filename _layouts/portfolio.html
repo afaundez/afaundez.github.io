@@ -3,6 +3,7 @@
   <head>
     <meta name="Description" content="Portfolio developed by Alvaro Faundez, designed by Javiera Arenas">
     <meta content='text/html; charset=UTF-8' http-equiv= 'Content-Type'>
+    <meta name="theme-color" content="#fff">
     <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
     <link href='https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css' rel='stylesheet'>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css' rel='stylesheet'>
@@ -25,6 +26,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/favicon-180x180.png">
     <link rel="mask-icon" color="#f1904e" href="/assets/img/favicon/safari-pinned-tab.svg">
     <!-- Chrome -->
+    <link rel="icon" sizes="512x512" href="/assets/img/favicon/favicon-512x512.png">
     <link rel="icon" sizes="192x192" href="/assets/img/favicon/favicon-192x192.png">
     <link rel="icon" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
     <link rel="icon" sizes="48x48" href="/assets/img/favicon/favicon-48x48.png">
@@ -50,5 +52,16 @@
     </footer>
     <script src="{{ '/assets/js/materialize/bin/materialize.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <script src="{{ '/assets/js/script.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .then(function(registration) {
+                console.log('Service Worker Registered');
+          });
+        navigator.serviceWorker.ready.then(function(registration) {
+           console.log('Service Worker Ready');
+        });
+      }
+    </script>
   </body>
 </html>
