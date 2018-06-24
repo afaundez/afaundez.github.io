@@ -1,35 +1,10 @@
 ---
 layout: portfolio
 ---
-<section id="about" class="white row">
-  <header class="col s12">
-    <h1 class="about">Hi. <span style="font-size: 1.5rem;">I'm a Software Developer - Team Player - Agile Enthusiast</span></h1>
+<section id="about">
+  <header>
+    <h1>Hi. <span>I'm a Software Developer - Team Player - Agile Enthusiast</span></h1>
   </header>
-  <div class="col s12">
-    <p class="flow-text hide">
-      {% assign icons = "centos docker git aws heroku hadoop mongodb mysql postgre redis bootstrap d3 jquery ruby-on-rails clojure css3 go html5 java javascript perl python ruby sass script shell" | split: " " %}
-      {% for icon in icons %}
-      <span class="icon-{{icon}}" title="{{icon}}"></span>
-      {% endfor %}
-      {% assign icons = "atom cofeescript nginx apple" | split: " " %}
-      {% for icon in icons %}
-      <span
-      class="devicon-{{icon}}-original" title="{{icon}}"></span>
-      {% endfor %}
-      {% assign icons = "c c++ cucumber debian apache github safari chrome slack travis trello ubuntu vim" | split: " " %}
-      {% for icon in icons %}
-      <span class="devicon-{{icon}}-plain" title="{{icon}}"></span>
-      {% endfor %}
-      {% assign icons = "markdown compass less jekyll_small wordpress windows stackoverflow hackernews dropbox jenkins opensource haskell mailchimp netbeans eclipse prolog sublime materializecss sqlite" | split: " " %}
-      {% for icon in icons %}
-      <span class="devicons devicons-{{icon}}" title="{{icon}}"></span>
-      {% endfor %}
-      <span class="icon-hive-no-use-in-production"></span>
-      <span class="icon-solr" title="solr"></span>
-      <span class="icon-pig-no-use-in-production" title="pig"></span>
-      <span class="icon-chef" title="chef"></span>
-    </p>
-  </div>
 </section>
 {% include projects_section.html %}
 {% include others_section.html %}
