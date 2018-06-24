@@ -1,9 +1,9 @@
 @import 'portfolio/variables';
 @import 'portfolio/firenxis/style';
 @import 'portfolio/afaundez/style';
+
 @import 'portfolio/materialize-overrides';
 
-@import 'materialize/components/variables';
 @import 'materialize/components/normalize';
 @import 'materialize/components/global';
 @import 'materialize/components/grid';
@@ -61,11 +61,11 @@ body {
   }
 
   main {
-    @extend container;
+    @extend .container;
     section#about  {
-      @extend .kong-gradient .row;
+      @extend .kong-gradient, .row;
       header {
-        @extend .col .s12;
+        @extend .col, .s12;
         h1 {
           font-family: $font-work-sans;
           color: white;
@@ -86,7 +86,7 @@ body {
       padding-left: 1rem;
       padding-right: 1rem;
       > header {
-        @extend .col .s12;
+        @extend .col, .s12;
         padding-top: 5rem !important;
         padding-bottom: 5rem !important;
         text-align: center;
@@ -107,23 +107,23 @@ body {
     }
 
     article.project {
-      @extend .col .s12 .project .scrollspy;
+      @extend .col, .s12, .project;
       figure {
-        @extend .col .s12 .m6 .l4 .xl3;
+        @extend .col, .s12, .m6, .l4, .xl3;
         img {
-          @extend .responsive-img .materialboxed;
+          @extend .responsive-img, .materialboxed;
         }
         figcaption {
           @extend .left;
         }
       }
       header {
-        @extend .col .s12 .m6 .l8 .xl9;
+        @extend .col, .s12, .m6, .l8, .xl9;
       }
       .description {
-        @extend .col .s12 .m6 .l8 .xl9;
+        @extend .col, .s12, .m6, .l8, .xl9;
         p {
-          @extend .col .s12 .flow-text;
+          @extend .col, .s12, .flow-text;
         }
       }
       h3 {
@@ -146,18 +146,18 @@ body {
       color: #101a22;
 
       article {
-        @extend .col .s6 .m3 .l3 .xl3;
+        @extend .col, .s6, .m3, .l3, .xl3;
         div.wrapper {
           img {
-            @extend .responsive-img .col .s12;
+            @extend .responsive-img, .col, .s12;
           }
           figcaption {
-            @extend .col .s12;
+            @extend .col, .s12;
             div.badges {
-              @extend .left .col .s12;
+              @extend .left, .col, .s12;
             }
             p.description {
-              @extend .col .s12;
+              @extend .col, .s12;
               color: black;
             }
           }
@@ -170,19 +170,16 @@ body {
     }
 
     section#music {
-      section.albums {
-        @extend .row .section;
-        article {
-          @extend .col .m4 .s12
+      section#albums {
+        @extend .row, .section;
+
+        article[id^="album"] {
+          @extend .col, .m4, .s12;
+
           .album {
-            @extend video-responsive;
             position: relative;
-          }
-          .album:before {
-            content: "";
-            display: block;
-            padding-top: 100%;
-            .player {
+
+            iframe.player {
               position: absolute;
               top: 0;
               left: 0;
@@ -190,14 +187,19 @@ body {
               right: 0;
             }
           }
-        }
 
+          .album:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+          }
+        }
       }
     }
   }
 
   footer {
-    @extend .kong-gradient .row;
+    @extend .kong-gradient, .row;
     font-family: $font-poiret-one;
     color: white;
     margin: 0 0;
@@ -205,7 +207,7 @@ body {
       margin: auto 0;
     }
     p {
-      @extend .center-align .col .s12;
+      @extend .center-align, .col, .s12;
     }
   }
 }
