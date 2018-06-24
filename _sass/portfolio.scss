@@ -2,7 +2,18 @@
 @import 'portfolio/firenxis/style';
 @import 'portfolio/afaundez/style';
 @import 'portfolio/materialize-overrides';
-@import 'materialize/materialize';
+
+@import 'materialize/components/variables';
+@import 'materialize/components/normalize';
+@import 'materialize/components/global';
+@import 'materialize/components/badges';
+@import 'materialize/components/icons-material-design';
+@import 'materialize/components/grid';
+@import 'materialize/components/materialbox';
+@import 'materialize/components/navbar';
+@import 'materialize/components/typography';
+@import 'materialize/components/tooltip';
+@import 'materialize/components/materialbox';
 
 .container {
   margin: 0 auto;
