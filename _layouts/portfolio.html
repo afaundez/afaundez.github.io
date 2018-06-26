@@ -4,11 +4,6 @@
     <meta name="Description" content="Portfolio developed by Alvaro Faundez, designed by Javiera Arenas">
     <meta content='text/html; charset=UTF-8' http-equiv= 'Content-Type'>
     <meta name="theme-color" content="#fff">
-    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-    <link href='https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css' rel='stylesheet'>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css' rel='stylesheet'>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Faster+One|Poiret+One|Work+Sans:200' rel='stylesheet'>
     <!-- Begin Jekyll Favicon tag v0.2.1 -->
     <!-- Classic -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -37,7 +32,10 @@
     <meta name="msapplication-config" content="/browserconfig.xml">
     <!-- End Jekyll Favicon tag -->
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel='stylesheet' href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poiret+One|Work+Sans:200'>
+    <link rel='preload' href='https://fonts.googleapis.com/css?family=Faster+One' as="style" onload="this.rel='stylesheet'">
+    <link rel='preload' href='https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css' as="style" onload="this.rel='stylesheet'">
     <title>{{ site.title }}</title>
   </head>
   <body>
@@ -51,7 +49,6 @@
       {% include footer.html %}
     </footer>
     <script src="{{ '/assets/js/lazy-load.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-    <script src="{{ '/assets/js/materialize/bin/materialize.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <script src="{{ '/assets/js/script.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <script>
       if('serviceWorker' in navigator) {
