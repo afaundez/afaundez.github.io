@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
           if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
             lazyImage.src = lazyImage.dataset.src;
             lazyImage.srcset = lazyImage.dataset.srcset;
+            if (lazyImage.parentNode.tagName.toLowerCase() === 'picture') {
+              lazyImage.parentNode.querySelectorAll('source').forEach(
+                function(source) {
+                  source.srcset = this.dataset.src;
+                }, lazyImage);
+            };
             lazyImage.classList.remove("lazy");
 
             lazyImages = lazyImages.filter(function(image) {

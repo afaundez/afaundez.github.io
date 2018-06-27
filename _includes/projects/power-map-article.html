@@ -1,6 +1,10 @@
 <article id="power-map-project" class="project scrollspy">
   <figure>
-    <img alt="Powerade JS library" class="lazy" data-caption="Porwer Map example with countries. In this example data is synced to a Airtable." src='{{ "/assets/img/projects/placeholder-01.jp2" | absolute_url }}' data-src='{{ "/assets/img/projects/01.gif" | absolute_url }}' data-srcset='{{ "/assets/img/projects/01.gif" | absolute_url }} 1x, {{ "/assets/img/projects/01.gif" | absolute_url }} 2x'>
+    <picture>
+      <source srcset='{{ "/assets/img/projects/placeholder-01.jp2" | absolute_url }}' type='image/jp2'>
+      <source srcset='{{ "/assets/img/projects/placeholder-01.webp" | absolute_url }}' type='image/webp'>
+      <img src='{{ "/assets/img/projects/placeholder-01.jpg" | absolute_url }}' alt="Powerade JS library" class="lazy" data-caption="Porwer Map example with countries. In this example data is synced to a Airtable." data-src='{{ "/assets/img/projects/01.gif" | absolute_url }}'>
+    </picture>
   </figure>
   <div class="content">
     <header>
