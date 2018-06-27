@@ -14,11 +14,7 @@
 
         li a {
           i {
-            @include fluid-type(320px, 600px, 70px, 178px);
-
-            &.bigger {
-              @include fluid-type(320px, 600px, 100px, 256px);
-            }
+            @include fluid-type(320px, 600px, 100px, 256px);
           }
         }
       }
@@ -32,11 +28,7 @@
       justify-content: space-between;
 
       ul.links li a i {
-        @include fluid-type(600px, $max_width, 12px, 128px);
-
-        &.bigger {
-          @include fluid-type(600px, $max_width, 18px, 192px);
-        }
+        @include fluid-type(600px, $max_width, 18px, 192px);
       }
     }
   }
