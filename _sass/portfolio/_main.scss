@@ -11,18 +11,22 @@
 
 @media only screen and (min-width: 600px) {
   main {
+    > section {
+      h2, h3, header, section, article, p, figure, img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
     section.section {
+
       article.project {
         figure {
-          flex-basis: 30%;
-          img {
-            width: 100%;
-            max-width: 100%;
-          }
+          width: 30%;
         }
 
         .content {
-          flex-basis: 70%;
+          width: 70%;
 
           h3, p {
             padding-left: 5%;
@@ -109,8 +113,6 @@ main {
     }
 
     > header {
-      flex-basis: 100%;
-
       h2 {
         @include fluid-type($min_width, $max_width, 36px, 128px);
         padding: 10% 0;
