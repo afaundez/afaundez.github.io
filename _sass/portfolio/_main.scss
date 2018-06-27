@@ -2,7 +2,8 @@
   main {
     > section {
       h2, h3, header, section, article, p, figure, img {
-        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
         text-align: center;
       }
     }
@@ -90,7 +91,6 @@ main {
 
     &:nth-child(even) {
       background-color: #101a22;
-      color: #fcebe0;
     }
 
     &:nth-child(odd) {
