@@ -7,7 +7,11 @@
       <h3>javi.care</h3>
     </header>
     <figure>
-      <img alt="Javi.care portfolio" class="lazy" src='{{ "/assets/img/others/placeholder-javi-care.jp2" | absolute_url }}' data-src='{{ "/assets/img/others/javi-care.gif" | absolute_url }}' data-srcset='{{ "/assets/img/others/javi-care.gif" | absolute_url }} 1x, {{ "/assets/img/others/javi-care.gif" | absolute_url }} 2x'>
+      <picture>
+        <source srcset='{{ "/assets/img/others/placeholder-javi-care.jp2" | absolute_url }}' type='image/jp2'>
+        <source srcset='{{ "/assets/img/others/placeholder-javi-care.webp" | absolute_url }}' type='image/webp'>
+        <img src='{{ "/assets/img/others/placeholder-javi-care.jpg" | absolute_url }}' data-src='{{ "/assets/img/others/javi-care.gif" | absolute_url }}' class="lazy" alt="javi.care portfolio">
+      </picture>
     </figure>
     <p class="badges">
       <span class="devicons devicons-ruby"></span>
@@ -22,7 +26,11 @@
       <h3>ATE</h3>
     </header>
     <figure>
-      <img alt="And The Elephants's website" class="lazy" src='{{ "/assets/img/others/placeholder-ate.jp2" | absolute_url }}' data-src='{{ "/assets/img/others/ate.gif" | absolute_url }}' data-srcset='{{ "/assets/img/others/ate.gif" | absolute_url }} 1x, {{ "/assets/img/others/ate.gif" | absolute_url }} 2x'>
+      <picture>
+        <source srcset='{{ "/assets/img/others/placeholder-ate.jp2" | absolute_url }}' type='image/jp2'>
+        <source srcset='{{ "/assets/img/others/placeholder-ate.webp" | absolute_url }}' type='image/webp'>
+        <img src='{{ "/assets/img/others/placeholder-ate.jpg" | absolute_url }}' data-src='{{ "/assets/img/others/ate.gif" | absolute_url }}' class="lazy" alt="And The Elephants's website">
+      </picture>
     </figure>
     <p class="badges">
       <span class="devicons devicons-ruby"></span>

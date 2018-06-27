@@ -1,6 +1,10 @@
 <article id="jekyll-favicon-project" class="project scrollspy">
   <figure>
-    <img alt="Jekyll Favicon plugin" class="lazy" data-caption="Using jekyll-favicon as jekyll plugin" src='{{ "/assets/img/projects/placeholder-04.jp2" | absolute_url }}' data-src='{{ "/assets/img/projects/04.gif" | absolute_url }}' data-srcset='{{ "/assets/img/projects/04.gif" | absolute_url }} 1x, {{ "/assets/img/projects/04.gif" | absolute_url }} 2x'>
+    <picture>
+      <source srcset='{{ "/assets/img/projects/placeholder-04.jp2" | absolute_url }}' type='image/jp2'>
+      <source srcset='{{ "/assets/img/projects/placeholder-04.webp" | absolute_url }}' type='image/webp'>
+      <img src='{{ "/assets/img/projects/placeholder-04.jpg" | absolute_url }}' data-src='{{ "/assets/img/projects/04.gif" | absolute_url }}' class="lazy" alt="Jekyll Favicon Plugin" data-caption="Using jekyll-favicon as jekyll plugin">
+    </picture>
   </figure>
   <div class="content">
     <header>
