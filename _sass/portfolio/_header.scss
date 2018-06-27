@@ -1,3 +1,47 @@
+@media only screen and (max-width: 600px) {
+  header {
+    > nav {
+      padding: 0 2%;
+
+      h1.brand {
+        flex-basis: 100%;
+        text-align: center;
+      }
+
+      ul.links {
+        flex-basis: 100%;
+        justify-content: center;
+
+        li a {
+          i {
+            @include fluid-type(320px, 600px, 70px, 178px);
+
+            &.bigger {
+              @include fluid-type(320px, 600px, 100px, 256px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  header {
+    > nav {
+      justify-content: space-between;
+
+      ul.links li a i {
+        @include fluid-type(600px, $max_width, 12px, 128px);
+
+        &.bigger {
+          @include fluid-type(600px, $max_width, 18px, 192px);
+        }
+      }
+    }
+  }
+}
+
 header {
   nav {
     @extend .kong-gradient;
@@ -19,41 +63,7 @@ header {
       li {
         display: inline-flex;
         align-items: center;
-
-        i {
-          @include fluid-type($min_width, $max_width, 12px, 128px);
-        }
-
-        i.bigger {
-          @include fluid-type($min_width, $max_width, 18px, 192px);
-        }
       }
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  header {
-    > nav {
-      padding: 0 2%;
-
-      h1.brand {
-        flex-basis: 100%;
-        text-align: center;
-      }
-
-      ul.links {
-        flex-basis: 100%;
-        justify-content: center;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  header {
-    > nav {
-      justify-content: space-between;
     }
   }
 }
