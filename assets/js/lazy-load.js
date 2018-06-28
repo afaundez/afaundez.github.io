@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(function() {
         lazyImages.forEach(function(lazyImage) {
           if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.srcset = lazyImage.dataset.srcset;
+            let video = document.createElement('video');
+            let source = document.createElement('source');
+            video.autoplay = true;
+            video.loop = true;
+            source.src = lazyImage.dataset.src;
+            source.type = 'video/mp4';
+            video.appendChild(source);
             if (lazyImage.parentNode.tagName.toLowerCase() === 'picture') {
-              lazyImage.parentNode.querySelectorAll('source').forEach(
-                function(source) {
-                  source.srcset = this.dataset.src;
-                }, lazyImage);
+              lazyImage.parentNode.replaceWith(video);
             };
             lazyImage.classList.remove("lazy");
 
