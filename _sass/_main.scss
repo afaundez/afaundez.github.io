@@ -19,7 +19,7 @@
       }
     }
 
-    section.section {
+    section.category {
 
       article.project {
         figure {
@@ -69,7 +69,7 @@ main {
   display: flex;
   flex-direction: column;
 
-  section#about {
+  section.about {
     @extend .kong-gradient;
     padding: 5% 2%;
 
@@ -82,7 +82,7 @@ main {
     }
   }
 
-  section.section {
+  section.category {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -170,7 +170,7 @@ main {
     }
   }
 
-  section#music {
+  section.music {
     flex-direction: row;
 
     .album {
