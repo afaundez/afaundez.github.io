@@ -1,93 +1,17 @@
-@media only screen and (max-width: 600px) {
-  main {
-    > section {
-      h2, h3, header, section, article, p, figure, img, video {
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  main {
-    > section {
-      h2, h3, header, section, article, p, figure, img, video {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-
-    section.category {
-
-      article.project {
-        figure {
-          width: 30%;
-        }
-
-        .content {
-          width: 70%;
-
-          h3, p {
-            padding-left: 5%;
-            text-align: left;
-          }
-        }
-      }
-    }
-
-    section.websites {
-      flex-direction: row !important;
-      justify-content: space-around !important;
-
-      header {
-        flex-basis: 100%;
-      }
-
-      article.website {
-        flex-basis: 25%;
-        text-align: center;
-
-        h3, p {
-          flex-basis: 100%;
-        }
-
-        figure {
-          flex-basis: 100%;
-          img {
-            width: 100%;
-            max-width: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
 main {
   display: flex;
   flex-direction: column;
-
-  section.about {
-    @extend .kong-gradient;
-    padding: 5% 2%;
-
-    p {
-      @include fluid-type($min_width, $max_width, 16px, 32px);
-
-      span {
-        @include fluid-type($min_width, $max_width, 32px, 128px);
-      }
-    }
-  }
+  text-align: center;
 
   section.category {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 0 2%;
+
+    article, header, h2, h3, figure, picture, img, video {
+      width: 100%;
+      max-width: 100%;
+    }
 
     &:nth-child(even) {
       background-color: #101a22;
@@ -96,33 +20,17 @@ main {
     &:nth-child(odd) {
       background-color: #fcebe0;
       color: #101a22;
-
-      article {
-        figure {
-          figcaption {
-            p.description {
-              color: black;
-            }
-          }
-        }
-
-        a {
-          color: #cd0a0a;
-        }
-      }
     }
 
-    > header {
-      h2 {
-        @include fluid-type($min_width, $max_width, 36px, 128px);
-        padding: 10% 0;
-        font-weight: lighter;
-      }
+    h2 {
+      padding: 10% 0;
+      @include fluid-type($min_width, $max_width, 36px, 128px);
+      font-weight: lighter;
     }
 
     article {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       padding-bottom: 5%;
 
       &:last-child {
@@ -130,14 +38,14 @@ main {
       }
 
       h3 {
-        @include fluid-type($min_width, $max_width, 24px, 96px);
-        font-family: $font-faster-one;
-        font-weight: 400;
         padding-bottom: 10%;
+        font-family: $font-faster-one;
+        @include fluid-type($min_width, $max_width, 24px, 96px);
+        font-weight: 400;
       }
 
       figure {
-        align-self: flex-start;
+        padding-bottom: 5%;
 
         picture, video {
           border: 2px solid #f15a4c;
@@ -147,53 +55,103 @@ main {
       }
 
       p {
-        padding-bottom: 10%;
+        padding-bottom: 5%;
+        @include fluid-type($min_width, $max_width, $min_font, $max_font);
+      }
 
-        &.badges {
-          text-align: center;
+      &.project {
+        a {
+          @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+          color: #f15a4c;
+          font-weight: bolder;
         }
       }
 
-      .content {
-        display: flex;
-        flex-direction: column;
+      &.website {
+        p {
+          a {
+            color: #cd0a0a;
+            font-weight: bolder;
+          }
+        }
       }
-    }
 
-    p {
-      @include fluid-type($min_width, $max_width, $min_font, $max_font);
+      &.album {
+        display: block;
 
-      a {
-        color: #f15a4c;
-        font-weight: bolder;
+        .player {
+          position: relative;
+
+          &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+          }
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border: 2px solid white;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+        }
       }
     }
   }
+}
 
-  section.music {
-    flex-direction: row;
+@media only screen and (min-width: 600px) {
+  main section.category {
+    header {
+      flex-basis: 100%;
+      text-align: left;
+    }
 
-    .album {
-      display: block;
-      flex-basis: 33%;
+    &.projects {
+      article.project {
+        flex-direction: row !important;
+        flex-wrap: wrap;
 
-      .player {
-        display: flex;
-        align-items: flex-start;
-        position: relative;
-
-        &:before {
-          content: "";
-          display: block;
-          padding-top: 100%;
+        figure {
+          flex-basis: 25%;
         }
 
-        iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
+        p {
+          flex-basis: 70%;
+          padding-left: 5%;
+          text-align: justify;
+        }
+      }
+    }
+
+    &.websites {
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      article.website {
+        flex-basis: 25%;
+        max-width: 25%;
+        text-align: left;
+      }
+    }
+
+    &.music {
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .album {
+        flex-basis: 25%;
+
+        .player {
+          display: flex;
+          align-items: flex-start;
         }
       }
     }

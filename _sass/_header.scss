@@ -1,17 +1,29 @@
-@media only screen and (max-width: 600px) {
-  body > header {
-    padding: 0 2%;
+body > header {
+  @extend .kong-gradient;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2%;
 
-    h1.brand {
-      flex-basis: 100%;
-      text-align: center;
-    }
+  h1.brand {
+    flex-basis: 100%;
+    @include fluid-type($min_width, $max_width, 48px, 96px);
+    padding: 10% 0;
+    font-family: $font-poiret-one;
+    font-weight: lighter;
+    text-align: center;
+  }
 
-    ul.links {
-      flex-basis: 100%;
-      justify-content: center;
+  ul.links {
+    display: inline-flex;
+    align-items: center;
+    flex-basis: 100%;
+    justify-content: center;
 
-      li a {
+    li  {
+      display: inline-flex;
+      align-items: center;
+
+      a {
         i {
           @include fluid-type(320px, 600px, 100px, 256px);
         }
@@ -22,34 +34,18 @@
 
 @media only screen and (min-width: 600px) {
   body > header {
+    padding: 0 5%;
     justify-content: space-between;
 
-    ul.links li a i {
-      @include fluid-type(600px, $max_width, 18px, 192px);
+    h1 {
+      flex-basis: auto !important;
     }
-  }
-}
 
-body > header {
-  @extend .kong-gradient;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 5%;
-
-  h1.brand {
-    @include fluid-type($min_width, $max_width, 48px, 96px);
-    padding: 10% 0;
-    font-family: $font-poiret-one;
-    font-weight: lighter;
-  }
-
-  ul.links {
-    display: inline-flex;
-    align-items: center;
-
-    li {
-      display: inline-flex;
-      align-items: center;
+    ul.links {
+      flex-basis: auto !important;
+      li a i {
+        @include fluid-type(600px, $max_width, 18px, 192px);
+      }
     }
   }
 }

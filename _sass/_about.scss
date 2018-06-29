@@ -1,0 +1,18 @@
+main section.about {
+  @extend .kong-gradient;
+  padding: 5% 2%;
+
+  p {
+    @include fluid-type($min_width, $max_width, 16px, 32px);
+
+    span {
+      @include fluid-type($min_width, $max_width, 32px, 128px);
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  main section.about {
+    text-align: left;
+  }
+}
