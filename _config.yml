@@ -7,14 +7,17 @@ url: https://alvaro.faundez.net
 twitter_username: afaundez
 github_username: afaundez
 
+theme: false
 exclude:
   - .gitignore
   - CNAME
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - favicon.svg
 
 # favicon:
-#   path: /assets/img/favicon
+#   path: /assets/media/favicon
 #   apple-touch-icon:
 #     background: '#f1904e'
 #   safari-pinned-tab:
