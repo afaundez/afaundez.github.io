@@ -48,7 +48,7 @@
     <script src="{{ '/assets/scripts/main.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/assets/scripts/sw.js')
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
           .then(function(registration) {});
         navigator.serviceWorker.ready.then(function(registration) {});
       }
