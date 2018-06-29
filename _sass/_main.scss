@@ -37,9 +37,9 @@
       }
     }
 
-    section#others {
-      flex-direction: row;
-      justify-content: space-around;
+    section.websites {
+      flex-direction: row !important;
+      justify-content: space-around !important;
 
       header {
         flex-basis: 100%;
