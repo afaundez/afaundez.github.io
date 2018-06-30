@@ -15,12 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
             let source = document.createElement('source');
             video.autoplay = true;
             video.loop = true;
-            source.src = lazyImage.src.replace("placeholder-", "").replace(/\.(.*)($|\?)/, '.mp4$2')
+            source.src = lazyImage.dataset.source
             source.type = 'video/mp4';
             video.appendChild(source);
             let fallback = document.createElement('img');
-            fallback.src = lazyImage.src.replace("placeholder-", "").replace(/\.(.*)($|\?)/, '.gif$2')
-            fallback.setAttribute('type', 'image/gif');
+            fallback.src = lazyImage.dataset.fallback
             video.appendChild(fallback);
             if (lazyImage.parentNode.tagName.toLowerCase() === 'picture') {
               lazyImage.parentNode.replaceWith(video);
