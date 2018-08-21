@@ -5,8 +5,11 @@
   {% assign albums = "1847244859 1454660844 2534787525" | split: " " %}
   {% for id in albums %}
   <article id="album-{{id}}" class="album">
+    <header hidden>
+      <h3>album-{{id}}</h3>
+    </header>
     <div class="player">
-      <iframe title="album-{{id}}" seamless="" frameborder=0 width='100%' height='100%' src="https://bandcamp.com/EmbeddedPlayer/album={{id}}/size=large/bgcol=333333/tracklist=false/linkcol=0f91ff/minimal=true/transparent=true/"></iframe>
+      <iframe title="album-{{id}}" src="https://bandcamp.com/EmbeddedPlayer/album={{id}}/size=large/bgcol=333333/tracklist=false/linkcol=0f91ff/minimal=true/transparent=true/"></iframe>
     </div>
   </article>
   {% endfor %}
