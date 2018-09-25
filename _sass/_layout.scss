@@ -1,0 +1,98 @@
+html {
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  body {
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    > header {
+      grid-area: header;
+      ul {
+        list-style-type: none;
+      }
+    }
+    > main {
+      grid-area: main;
+      .section {
+        display: grid;
+        .section-header {
+        }
+        .project {
+          display: grid;
+          grid-template-areas:
+            'project-header'
+            'project-content'
+            'project-media';
+          .project-header {
+            grid-area: project-header;
+          }
+          .project-content {
+            grid-area: project-content;
+          }
+          .project-media {
+            grid-area: project-media;
+            video, picture img{
+              width: 100%;
+            }
+          }
+          &.music {
+            grid-gap: 0;
+            .project-media {
+              position: relative;
+              overflow: hidden;
+              width: 100%;
+              &::after {
+                content: '';
+                display: block;
+                padding-top: 100%;
+              }
+              .player {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                iframe {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    > footer {
+      grid-area: footer;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    body {
+      > main {
+        .section {
+          &.coding {
+            .code {
+              grid-template-areas:
+              'project-header project-header'
+              'project-media project-content';
+              grid-template-columns: 1fr 3fr;
+            }
+          }
+          &.websites, &.music{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+            grid-auto-rows: minmax(50px, auto);
+            .section-header {
+              grid-column: 1 / -1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
