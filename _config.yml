@@ -6,8 +6,6 @@ baseurl: ""
 url: https://alvaro.faundez.net
 twitter_username: afaundez
 github_username: afaundez
-
-theme: false
 exclude:
   - .gitignore
   - CNAME
