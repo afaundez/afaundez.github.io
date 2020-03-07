@@ -1,11 +1,7 @@
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>{{ site.title }}</title>
-    <meta name="Description" content="Portfolio developed by Alvaro Faundez, designed by Javiera Arenas">
-    <meta content='text/html; charset=UTF-8' http-equiv= 'Content-Type'>
-    <meta name="theme-color" content="#fff">
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    {% seo %}
     {% include favicon.html %}
     <link rel='stylesheet' href="{{ '/assets/style/default.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel='preload' href='https://fonts.googleapis.com/css?family=Faster+One%7CWork+Sans:200%7CPoiret+One' as="style" onload="this.rel='stylesheet'">
