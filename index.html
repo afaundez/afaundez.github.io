@@ -1,7 +1,48 @@
 ---
-layout: home
+layout: default
 ---
-{% include main/about_section.html %}
-{% include main/coding_section.html %}
-{% include main/websites_section.html %}
-{% include main/music_section.html %}
+<section class='about'>
+  <header class='about-header'>
+    <h2 hidden>About</h2>
+    <p><span>Hi.</span> I'm a Software Developer.</p>
+  </header>
+</section>
+<section class='section coding'>
+  <header class='section-header'>
+    <h2>Recent work</h2>
+  </header>
+  {% for post in site.categories.software %}
+  <article class='project code'>
+    <header class='project-header'>
+      <h3>{{ post.title }}</h3>
+    </header>
+    {{ post.content }}
+  </article>
+  {% endfor %}
+</section>
+<section class='section websites'>
+  <header class='section-header'>
+    <h2>Music</h2>
+  </header>
+  {% for post in site.categories.websites %}
+  <article class='project website'>
+    <header class='project-header'>
+      <h3>{{ post.title }}</h3>
+    </header>
+    {{ post.content }}
+  </article>
+  {% endfor %}
+</section>
+<section class='section music'>
+  <header class='section-header'>
+    <h2>Music</h2>
+  </header>
+  {% for post in site.categories.music %}
+  <article class='project music'>
+    <header class='project-header'>
+      <h3>{{ post.title }}</h3>
+    </header>
+    {{ post.content }}
+  </article>
+  {% endfor %}
+</section>
