@@ -6,19 +6,28 @@ baseurl: ""
 url: https://alvaro.faundez.net
 twitter_username: afaundez
 github_username: afaundez
+markdown: kramdown
 exclude:
+  - .git
   - .gitignore
+  - .ruby-version
   - CNAME
+  - favicon.svg
   - Gemfile
   - Gemfile.lock
   - README.md
-  - favicon.svg
-
-# favicon:
-#   path: /assets/media/favicon
-#   apple-touch-icon:
-#     background: '#f1904e'
-#   safari-pinned-tab:
-#     mask-icon-color: '#f1904e'
-#   ie:
-#     tile-color: '#f1904e'
+keep_files:
+  - assets/data
+  - assets/media
+  - assets/posts
+defaults:
+  - scope:
+      path: ''
+      type: 'posts'
+    values:
+      layout: post
+  - scope:
+      path: ''
+      type: 'pages'
+    values:
+      layout: page

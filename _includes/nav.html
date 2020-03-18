@@ -1,0 +1,12 @@
+{% assign nav_pages = site.pages | where_exp: 'page', 'page.nav' | sort: 'nav.order' %}
+<ul class='pages'>
+  {% for _page in nav_pages %}
+  {% unless _page.url == page.url %}
+  <li class='page'><a href='{{ _page.url }}'>{{ _page.nav.label }}</a></li>
+  {% endunless %}
+  {% endfor %}
+</ul>
+<span class='page page--current'><a href='{{ page.url }}'>{{ page.nav.label }}</a></span>
+<ul class='networks'>
+  <li class='network'><address><a href='mailto:alvaro@faundez.net'>email</a></address></li>
+</ul>

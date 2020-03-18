@@ -1,0 +1,83 @@
+// Based on https://codepen.io/JoahG/pen/QJQdJB
+$level-height: 200vmin;
+$level-width: 100vw;
+$tile-width: calc(#{$level-width} / 15);
+$tile-height: calc(2 * #{$tile-width});
+$level-visible-height: calc(#{$level-width} * #{$level-height});
+$level-transform: perspective(calc(#{$level-height} / 2.5)) scale(2, 1) rotateX(60deg);
+$level-fog: 20%; // calc(0.2 * #{$level-visible-height});
+$level-fog-clear: 5%; // calc(0.1 * #{$level-visible-height});
+$tile-border-width: calc(0.03 * #{$tile-width});
+$tile-border-height-fixed: calc(3 * #{$tile-border-width});
+$tile-border-color: red;
+$walk-step: calc(2 * #{$tile-height});
+
+%relative-parent-absolute-after-before {
+  position: relative;
+  overflow: hidden;
+
+  &::before, &::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    content: '';
+  }
+}
+
+%transform-perspective {
+  transform-origin: center bottom;
+  transform: $level-transform;
+}
+
+@keyframes walk {
+  from { transform: $level-transform translateY(0); }
+  to { transform: $level-transform translateY($walk-step);}
+}
+
+.scene {
+  @extend %relative-parent-absolute-after-before;
+
+  &:before {
+    height: $level-height;
+    width: $level-width;
+    left: calc(-0.5 * (#{$level-width} - 100vw));
+    z-index: -2;
+    background-image:
+      linear-gradient(to right, $tile-border-color $tile-border-width, transparent $tile-border-width),
+      linear-gradient(to bottom, $tile-border-color $tile-border-height-fixed, transparent $tile-border-height-fixed);
+    background-position: center bottom;
+    background-size: $tile-width $tile-height;
+    @extend %transform-perspective;
+    animation: 1.0s steps(60) infinite running walk;
+
+  }
+  &:after {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background:
+      linear-gradient(to top,
+        hsla(0, 0%, 0%, 0.0) 0,
+        hsla(0, 0%, 0%, 0.0) $level-fog-clear,
+        hsla(0, 0%, 0%, 0.019) calc(.095 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.070) calc(.177 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.138) calc(.247 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.212) calc(.310 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.291) calc(.368 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.373) calc(.423 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.455) calc(.476 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.538) calc(.529 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.620) calc(.582 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.701) calc(.637 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.781) calc(.695 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.857) calc(.758 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.925) calc(.829 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 0.978) calc(.912 * #{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 1.0) calc(#{$level-fog} + #{$level-fog-clear}),
+        hsla(0, 0%, 0%, 1.0)
+      ),
+      linear-gradient(to top, black, transparent 1rem);
+  }
+}
