@@ -1,20 +1,17 @@
 ---
-nav:
-  label: music
-  order: 2
+title: music
 ---
-<header class='category-header'>
-  <h2>Music</h2>
-</header>
+<dfn>And The Elephants</dfn> is a rock band from Chile. We have released three albums, two EP and one LP, always aiming for a good, conceptual and progressive rock.
+
+
 {% for post in site.categories.music %}
-<ul>
-  <li>
-    <article class='post post--album'>
-      <header class='post-header'>
-        <h3>{{ post.title }}</h3>
-      </header>
-      {{ post.content }}
-    </article>
-  </li>
-</ul>
+<article class='post post--album'>
+  <header class='post-header'>
+    <h3><a href='{{ post.url }}'>{{ post.title }}</a></h3>
+  </header>
+  <div class='post-content'>
+    {{ post.excerpt }}
+  </div>
+  <a href='{{ post.url }}'>More...</a>
+</article>
 {% endfor %}

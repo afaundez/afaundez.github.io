@@ -12,6 +12,10 @@
   font-family: Arcade Rounded;
   src: url('/assets/style/fonts/arcade/arcade-rounded.ttf') format('truetype');
 }
+@font-face {
+  font-family: Arcade Classic;
+  src: url('/assets/style/fonts/glitch/arcade-classic.ttf') format('truetype');
+}
 
 @import 'default/base';
 @import 'default/layout';

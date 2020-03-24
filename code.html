@@ -1,7 +1,5 @@
 ---
-nav:
-  label: code
-  order: 1
+title: code
 ---
 <ol>
   {% for post in site.categories.code %}
@@ -12,6 +10,7 @@ nav:
       </header>
       <div class='post-excerpt'>
         {{ post.excerpt }}
+        <a href='{{ post.url }}'>More...</a>
       </div>
     </article>
   </li>

@@ -1,12 +1,20 @@
-{% assign nav_pages = site.pages | where_exp: 'page', 'page.nav' | sort: 'nav.order' %}
-<ul class='pages'>
-  {% for _page in nav_pages %}
-  {% unless _page.url == page.url %}
-  <li class='page'><a href='{{ _page.url }}'>{{ _page.nav.label }}</a></li>
-  {% endunless %}
-  {% endfor %}
-</ul>
-<span class='page page--current'><a href='{{ page.url }}'>{{ page.nav.label }}</a></span>
-<ul class='networks'>
-  <li class='network'><address><a href='mailto:alvaro@faundez.net'>email</a></address></li>
-</ul>
+<div class='score'>
+  <span><br>07700</span>
+  <span>high score<br>900461</span>
+  <span>
+    <br>
+    {% unless page.url == '/' %}
+    <ol class='breadcrumb'>
+      <li class='page'>
+        /<a href='/'>home</a>
+      </li>
+      {% if page.layout == 'post' %}
+      <li class='page'>
+        {% assign category = page.categories | first %}
+        /<a href='/{{ category }}'>{{ category }}</a>
+      </li>
+      {% endif %}
+    </ol>
+    {% endunless %}
+  </span>
+</div>

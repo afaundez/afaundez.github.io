@@ -1,7 +1,15 @@
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    {% seo %}
+    {% seo title=false %}
+    {% assign host = site.title %}
+    {% if page.layout == 'post' %}
+    {% assign path = page.categories | first %}
+    {% assign cmd = page.title | downcase | slugify %}
+    {% else %}
+    {% assign path = page.title | downcase %}
+    {% endif %}
+    <title>{{ host }}:~{{ path | prepend: '/' }} $ {{ cmd }}</title>
     {% include favicon.html %}
     <link rel='stylesheet' href="{{ '/assets/style/default.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
@@ -14,4 +22,5 @@
       {% include footer.html %}
     </footer>
   </body>
+  <script src='/assets/scripts/default.js'></script>
 </html>
