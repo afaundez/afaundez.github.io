@@ -1,0 +1,25 @@
+.site {
+  display: grid;
+  grid-template-areas:
+    'site-nav'
+    'site-header'
+    'site-main'
+    'site-footer';
+
+  .site-nav {
+    grid-area: site-nav;
+    display: grid;
+  }
+
+  .site-header {
+    grid-area: site-header;
+  }
+
+  .site-main {
+    grid-area: site-main;
+  }
+
+  .site-footer {
+    grid-area: site-footer;
+  }
+}

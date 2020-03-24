@@ -1,48 +1,11 @@
 ---
-layout: default
 ---
-<section class='about'>
-  <header class='about-header'>
-    <h2 hidden>About</h2>
-    <p><span>Hi.</span> I'm a Software Developer.</p>
-  </header>
-</section>
-<section class='section coding'>
-  <header class='section-header'>
-    <h2>Recent work</h2>
-  </header>
-  {% for post in site.categories.software %}
-  <article class='project code'>
-    <header class='project-header'>
-      <h3>{{ post.title }}</h3>
-    </header>
-    {{ post.content }}
-  </article>
-  {% endfor %}
-</section>
-<section class='section websites'>
-  <header class='section-header'>
-    <h2>Music</h2>
-  </header>
-  {% for post in site.categories.websites %}
-  <article class='project website'>
-    <header class='project-header'>
-      <h3>{{ post.title }}</h3>
-    </header>
-    {{ post.content }}
-  </article>
-  {% endfor %}
-</section>
-<section class='section music'>
-  <header class='section-header'>
-    <h2>Music</h2>
-  </header>
-  {% for post in site.categories.music %}
-  <article class='project music'>
-    <header class='project-header'>
-      <h3>{{ post.title }}</h3>
-    </header>
-    {{ post.content }}
-  </article>
-  {% endfor %}
-</section>
+<nav>
+  <ul id='game-menu'>
+    <li class='option option--highlighted'><a href='/#'>Start</a></li>
+    <li class='option'><a href='/code'>Code</a></li>
+    <li class='option'><a href='/music'>Soundtrack</a></li>
+    <li class='option'><a href='/options'>Options</a></li>
+    <li class='option'><a href='/about'>Credits</a></li>
+  </ul>
+</nav>

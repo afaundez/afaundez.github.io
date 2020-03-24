@@ -1,11 +1,11 @@
 {
-  "name": "Alvaro Faundez's Portfolio",
+  "name": "Alvaro Faundez",
   "short_name": "afaundez",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f1904e",
+  "background_color": "#000000",
   "theme_color": "#fff",
-  "description": "Alvaro Faundez's Portfolio",
+  "description": "Alvaro Faundez",
   "icons": [
     {
       "src": "/assets/media/favicon/favicon-512x512.png",
