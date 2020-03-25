@@ -1,18 +1,13 @@
-$base-color: white;
-$base-selectable-color: #fff2af;
-$base-background-color: #000000;
-$base-highlight-color: #d31900;
-
 @import 'fx/scanlines';
 @import 'fx/scene';
 
 %palette {
-  font-family: $arcade-classic-font-family;
+  font-family: $base-font-family;
   background-color: $base-background-color;
   color: $base-color;
 
   h1, h2, h3{
-    font-family: $arcade-interlaced-font-family;
+    font-family: $base-heading-font-family;
   }
 
   a {
@@ -70,9 +65,8 @@ $base-highlight-color: #d31900;
     align-items: center;
     text-align: center;
     width: 100%;
-    // min-height: 70vh;
     #game-menu {
-      font-family: $arcade-interlaced-font-family;
+      font-family: $base-selectable-font-family;
       .option {
         border-top: solid 1px transparent;
         border-bottom: solid 1px transparent;

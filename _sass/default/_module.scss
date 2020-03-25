@@ -35,22 +35,4 @@
   &--current {
     color: red;
   }
-
-  // &--github {
-  //   background-image: url(https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png);
-  //   background-repeat: no-repeat;
-  //   background-size: contain;
-  //   position:relative;
-  //
-  //   &:after {
-  //     content: 'G';
-  //     visibility: hidden;
-  //   }
-  //
-  //   span {
-  //     display: block;
-  //     position: absolute;
-  //     left: -999em;
-  //   }
-  // }
 }
