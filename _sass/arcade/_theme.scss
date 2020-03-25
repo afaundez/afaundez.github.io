@@ -2,16 +2,16 @@
 @import 'fx/scene';
 
 %palette {
-  font-family: $base-font-family;
-  background-color: $base-background-color;
-  color: $base-color;
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $color;
 
   h1, h2, h3{
-    font-family: $base-heading-font-family;
+    font-family: $heading-font-family;
   }
 
   a {
-    color: $base-selectable-color;
+    color: $selectable-color;
     text-decoration: none;
   }
 
@@ -66,16 +66,16 @@
     text-align: center;
     width: 100%;
     #game-menu {
-      font-family: $base-selectable-font-family;
+      font-family: $selectable-font-family;
       .option {
         border-top: solid 1px transparent;
         border-bottom: solid 1px transparent;
         &--highlighted {
-          border-top: solid 1px $base-selectable-color;
-          border-bottom: solid 1px $base-selectable-color;
+          border-top: solid 1px $selectable-color;
+          border-bottom: solid 1px $selectable-color;
         }
         *:hover {
-          color: $base-highlight-color;
+          color: $highlight-color;
         }
       }
     }

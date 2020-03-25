@@ -3,12 +3,12 @@ $level-height: 600%;
 $level-width: 300%;
 $tile-width: calc(100vmin/5);
 $tile-height: calc(2 * #{$tile-width});
-$level-transform: perspective(2400px) rotateX(70deg); //perspective(100vh) scale(1, 1);
-$level-fog: 40%; // calc(0.2 * #{$level-visible-height});
-$level-fog-clear: 40%; //30%; // calc(0.1 * #{$level-visible-height});
+$level-transform: perspective(2400px) rotateX(70deg);
+$level-fog: 40%;
+$level-fog-clear: 40%;
 $tile-border-width: 1%;
 $tile-border-height-fixed: calc(2 * #{$tile-border-width});
-$tile-border-color: $base-highlight-color;
+$tile-border-color: $highlight-color;
 $walk-step: calc(2 * #{$tile-height});
 
 %relative-parent-absolute-after-before {
@@ -75,6 +75,6 @@ $walk-step: calc(2 * #{$tile-height});
         rgba(0, 0, 0, 1.0) calc(#{$level-fog} + #{$level-fog-clear}),
         rgba(0, 0, 0, 1.0)
       ),
-      linear-gradient(to top, $base-background-color, transparent 1%);
+      linear-gradient(to top, $background-color, transparent 1%);
   }
 }
