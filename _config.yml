@@ -20,6 +20,7 @@ keep_files:
   - assets/data
   - assets/media
   - assets/posts
+theme: minima
 defaults:
   - scope:
       path: ''
